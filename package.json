@@ -1,0 +1,29 @@
+{
+    "name": "des",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {},
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/edisonlee55/DES.git"
+    },
+    "author": {
+        "name": "Edison Lee",
+        "email": "edisonlee@edisonlee55.com",
+        "url": "https://www.edisonlee55.com"
+    },
+    "contributors": [
+        {
+            "name": "Edison Lee",
+            "email": "edisonlee@edisonlee55.com",
+            "url": "https://www.edisonlee55.com"
+        }
+    ],
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/edisonlee55/DES/issues",
+        "email": "edisonlee@edisonlee55.com"
+    },
+    "dependencies": {}
+}
