@@ -73,3 +73,6 @@ function swap() {
 $("#genkey").click(function () {
     genkey();
 });
+
+console.log("DES v1.0.0");
+console.log("Copyright (c) 2018 MING-CHIEN LEE. All rights reserved.\n");
