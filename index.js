@@ -23,6 +23,9 @@ let template = [{
         role: 'close'
     }, {
         type: 'separator'
+    }, {
+        label: 'Toggle Developer Tools',
+        role: 'toggledevtools'
     }]
 }]
 if (process.platform === 'darwin') {
@@ -78,7 +81,7 @@ function createWindow() {
         protocol: 'file:',
         slashes: true
     }))
-    win.webContents.openDevTools()
+    //win.webContents.openDevTools()
     win.on('closed', () => {
         win = null
     })
