@@ -18,12 +18,6 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/semantic.min.js"></script>
     <script src="js/ie10-viewport-bug-workaround.js"></script>
-    <script src="js/dessrc.js"></script>
-    <script src="js/jscrypt.js"></script>
-    <script src="js/entropy.js"></script>
-    <script src="js/aes.js"></script>
-    <script src="js/aesprng.js"></script>
-    <script src="js/md5.js"></script>
     <script>if (window.module) module = window.module;</script>
 
     <body onload="nowLoaded();">
@@ -41,10 +35,10 @@
                 </div>
                 <div id="navbar" class="collapse navbar-collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active">
+                        <li>
                             <a href="index.html">Home</a>
                         </li>
-                        <li>
+                        <li class="active">
                             <a href="help.html">Help</a>
                         </li>
                     </ul>
@@ -54,35 +48,17 @@
 
         <div class="ui container">
             <div class="ui page-header">
-                <h1>DES / 3DES</h1>
+                <h1>DES / 3DES - Help</h1>
             </div>
-            <form class="ui form">
-                <div class="field">
-                    <label>64 bit Key (DES) or 192 bit Key (3DES) in Hexadecimal:</label>
-                    <input type="text" id="key" style="width:100%" maxlength="75" onfocus="ce();" onblur="ce();" onkeydown="ce();" />
-                </div>
-                <div class="field">
-                    <button class="ui blue button" type="button" id="genkey" value="Generate Key">Generate Key</button>
-                </div>
-                <div class="field">
-                    <label for="input">Input:</label>
-                    <textarea id="input" rows="10" cols="80" style="width:100%;" onfocus="ce();" onblur="ce();" onkeydown="ce();"></textarea>
-                </div>
-                <div class="field">
-                    <button class="ui blue button" type="button" id="encbut" value="Encrypt" onclick="encrypt_string();">Encrypt</button>
-                    <button class="ui blue button" type="button" id="decbut" value="Decrypt" onclick="decrypt_string();">Decrypt</button>
-                    <button class="ui blue button" type="button" onclick="swap()" value="Swap">Swap</button>
-                    <label for="vector">Init Vector (IV):</label>
-                    <input type="text" id="vector" size="16" onfocus="ce();" onblur="ce();" onkeydown="ce();" />
-                </div>
-                <div class="field">
-                    <label for="output">Output:</label>
-                    <textarea id="output" rows="10" cols="80" style="width:100%;" onfocus="ce();" onblur="ce();" onkeydown="ce();"></textarea>
-                </div>
-            </form>
+            <h2>
+                To encrypt, press the Generate Key button to generate a key, remember the key and Init Vector (IV).
+                <br><br>
+                To decrypt, enter the encrypt key, Init Vector (IV) and the encrypted message.
+                <br><br>
+                To swap message and encrypted message, press Swap button.
+            </h2>
         </div>
 
-        <script src="js/main.js"></script>
         <script src="https://cdn.edisonlee55.com/lib/js/poem.js"></script>
 
     </body>
