@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2018 MING-CHIEN LEE
+ * Copyright (c) 2018 Edison Lee, Phil Wang
  *
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
@@ -75,4 +75,4 @@ $("#genkey").click(function () {
 });
 
 console.log("DES v1.0.0");
-console.log("Copyright (c) 2018 MING-CHIEN LEE. All rights reserved.\n");
+console.log("Copyright (c) 2018 Edison Lee, Phil Wang. All rights reserved.\n");
