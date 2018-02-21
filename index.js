@@ -10,24 +10,46 @@ const Menu = electron.Menu
 const path = require('path')
 const url = require('url')
 let win
-let template = [{
-    label: 'Window',
-    role: 'window',
-    submenu: [{
-        label: 'Minimize',
-        accelerator: 'CmdOrCtrl+M',
-        role: 'minimize'
+let template = [
+    {
+        label: 'Edit',
+        submenu: [
+            { role: 'undo' },
+            { role: 'redo' },
+            { type: 'separator' },
+            { role: 'cut' },
+            { role: 'copy' },
+            { role: 'paste' },
+            { role: 'pasteandmatchstyle' },
+            { role: 'delete' },
+            { role: 'selectall' }
+        ]
     }, {
-        label: 'Close',
-        accelerator: 'CmdOrCtrl+W',
-        role: 'close'
+        label: 'View',
+        submenu: [
+            { role: 'reload' },
+            { role: 'forcereload' },
+            { role: 'toggledevtools' },
+            { type: 'separator' },
+            { role: 'resetzoom' },
+            { role: 'zoomin' },
+            { role: 'zoomout' },
+            { type: 'separator' },
+            { role: 'togglefullscreen' }
+        ]
     }, {
-        type: 'separator'
-    }, {
-        label: 'Toggle Developer Tools',
-        role: 'toggledevtools'
+        label: 'Window',
+        role: 'window',
+        submenu: [{
+            label: 'Minimize',
+            accelerator: 'CmdOrCtrl+M',
+            role: 'minimize'
+        }, {
+            label: 'Close',
+            accelerator: 'CmdOrCtrl+W',
+            role: 'close'
+        }]
     }]
-}]
 if (process.platform === 'darwin') {
     const name = "DES / 3DES"
     template.unshift({
