@@ -1,4 +1,88 @@
 <!DOCTYPE html>
-<script>
-	window.location = "https://ddlc.moe";
-</script>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>DES / 3DES</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="css/stylesheet.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/semantic.min.js"></script>
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/dessrc.js"></script>
+    <script src="js/jscrypt.js"></script>
+    <script src="js/entropy.js"></script>
+    <script src="js/aes.js"></script>
+    <script src="js/aesprng.js"></script>
+    <script src="js/md5.js"></script>
+    <script>if (window.module) module = window.module;</script>
+
+    <body onload="nowLoaded();">
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+                        aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="index.html">DES / 3DES</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="help.html">Help</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="ui container">
+            <div class="ui page-header">
+                <h1>DES / 3DES</h1>
+            </div>
+            <form class="ui form">
+                <div class="field">
+                    <label>64 bit Key (DES) or 192 bit Key (3DES) in Hexadecimal:</label>
+                    <input type="text" id="key" style="width:100%" maxlength="75" onfocus="ce();" onblur="ce();" onkeydown="ce();" />
+                </div>
+                <div class="field">
+                    <button class="ui blue button" type="button" id="genkey" value="Generate Key">Generate Key</button>
+                </div>
+                <div class="field">
+                    <label for="input">Input:</label>
+                    <textarea id="input" rows="10" cols="80" style="width:100%;" onfocus="ce();" onblur="ce();" onkeydown="ce();"></textarea>
+                </div>
+                <div class="field">
+                    <button class="ui blue button" type="button" id="encbut" value="Encrypt" onclick="encrypt_string();">Encrypt</button>
+                    <button class="ui blue button" type="button" id="decbut" value="Decrypt" onclick="decrypt_string();">Decrypt</button>
+                    <button class="ui blue button" type="button" onclick="swap()" value="Swap">Swap</button>
+                    <label for="vector">Init Vector (IV):</label>
+                    <input type="text" id="vector" size="16" onfocus="ce();" onblur="ce();" onkeydown="ce();" />
+                </div>
+                <div class="field">
+                    <label for="output">Output:</label>
+                    <textarea id="output" rows="10" cols="80" style="width:100%;" onfocus="ce();" onblur="ce();" onkeydown="ce();"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <script src="js/main.js"></script>
+
+    </body>
+
+</html>
